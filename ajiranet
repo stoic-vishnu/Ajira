@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.io;
+public class ajira{
+    /**
+     * @param args
+     */
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String s= sc.next();
+        String[] split=s.split(" ");
+        System.out.println("Successfully addded "+split[2]);
+        ArrayList<String> list=new ArrayList<>();
+        list.add(split[2]);
+        for(int i=0;i<list.size();i++){
+            if(split[1]!=computer || split[1]!=repeater && split[0]!=add)
+                System.out.println("Invalid command syntax");
+            if(!list.get(i).equals(split[2]))
+                System.out.println("Invalid command syntax");
+            
+        }
+        int n=sc.nextInt();
+        if(n)
+        System.out.println("SET_DEVICE_STRENGTH "+split[1]+n);
+    }
+}
